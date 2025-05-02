@@ -10,7 +10,7 @@
 
 ---
 
-## 🖼️ Project Structure
+## Project Structure
 
 ```bash
 BlazorEnhancedNavigation/
@@ -35,3 +35,16 @@ BlazorEnhancedNavigation/
 ├── BlazorEnhancedNavigation.sln
 ├── LICENSE
 └── .gitignore
+```
+# Key Features
+
+
+  - Component-based structure with scoped styles
+
+  - Enhanced navigation and layout control via NavMenu.razor & MainLayout.razor
+
+  - Razor pages like Home, Weather, and custom EnhancedForm
+
+  - Centralized routing through Routes.razor
+
+  - Ready to extend with new Blazor components or APIs
