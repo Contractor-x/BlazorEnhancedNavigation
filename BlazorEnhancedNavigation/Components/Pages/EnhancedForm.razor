@@ -1,0 +1,32 @@
+﻿@page "/search"
+
+<h3>Search (Enhanced Form)</h3>
+
+<EditForm Enhance FormName="SearchForm" Model="@Model" OnSubmit="@HandleSubmit">
+    <InputText @bind-Value="Model.Search" placeholder="Enter search term..." />
+    <button type="submit">Search</button>
+</EditForm>
+
+@if( _submitted)
+{
+    <div>You are looking for: @_searchText</div>
+}
+
+@code {
+    [SupplyParameterFromForm]
+    public SearchModel Model { get; set; } = new SearchModel();
+
+    private bool _submitted = false;
+    private string? _searchText = "";
+
+    private void HandleSubmit()
+    {
+        _submitted = true;
+        _searchText = Model.Search;
+    }
+
+    public class SearchModel
+    {
+        public string Search { get; set; }
+    }
+}
